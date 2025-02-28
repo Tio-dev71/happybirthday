@@ -221,6 +221,8 @@ body {
 
 .reset {
   text-align: center;
+  position: relative;
+  z-index: 100;
 }
 
 .reset button {
@@ -254,4 +256,29 @@ body {
   font-optical-sizing: auto;
   font-weight: 900;
   font-style:italic;
+  z-index: 2;
+}
+
+.black {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 400px) {
+  .background img {
+    width: 375px;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+  .black {
+    width: 375px;
+    height: 100%;
+    opacity: 0.3;
+  }
 }
